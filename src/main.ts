@@ -11,11 +11,12 @@ async function bootstrap() {
 
 app.enableCors({
   origin: (origin, callback) => {
-    console.log(origin);
-    if (!origin && !allowedOrigins.includes(origin) && process.env.NODE_ENV === 'production') {
-        callback(new Error('Not allowed by CORS'), false);
-        return;
-      }
+    console.log(`[CORS] Origin received: ${origin || 'NO ORIGIN'} | ENV: ${process.env.NODE_ENV}`);
+
+    if (process.env.NODE_ENV === 'production' && (!origin || !allowedOrigins.includes(origin))) {
+      callback(new Error('Not allowed by CORS'), false);
+      return;
+    }    
     callback(null, true);
   },
   methods: ['POST'],
