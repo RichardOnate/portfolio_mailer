@@ -1,0 +1,11 @@
+services:
+  portfolio-mailer-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio-mailer-api
+    ports:
+      - ${PORT:-3000}:${PORT:-3000}
+    env_file:
+      - .env
+    restart: always
