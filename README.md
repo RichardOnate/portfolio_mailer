@@ -1,27 +1,29 @@
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
-
-<p align="center">
-  <b>Powered by NestJS</b>
-</p>
-
 ---
 
 # 📬 Portfolio Mailer API
 
-Este proyecto es una REST API desarrollada con **NestJS** para gestionar el envío de correos desde el formulario de contacto de mi portafolio personal. Al enviar un mensaje, se notifica tanto al usuario como a mí, utilizando un template HTML personalizado.
+Este proyecto es una REST API desarrollada con **NestJS** y desplegada en **Render** para gestionar el envío de correos desde el formulario de contacto de mi portafolio personal. Al enviar un mensaje, se notifica tanto al usuario como a mí, utilizando un template HTML personalizado.
 
+![NestJS](https://img.shields.io/badge/NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-%23007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Nodemailer](https://img.shields.io/badge/Nodemailer-339933?style=for-the-badge&logo=npm&logoColor=white)
+![Handlebars](https://img.shields.io/badge/Handlebars.js-000000?style=for-the-badge&logo=handlebarsdotjs&logoColor=white)
+![Render](https://img.shields.io/badge/Render-4285F4?style=for-the-badge&logo=render&logoColor=white)
 ---
 
 ## 🚀 Características
 
 - ⚙️ **NestJS** como framework backend.
 - 📧 **Nodemailer** para envío de correos.
+- 📝 **Handlebars** para renderizar plantillas de correo electrónico personalizadas.
 - 🔐 **API Key** para autenticación.
 - 📊 **Swagger** para documentación y pruebas del endpoint.
 - ⏱️ **Throttle** para limitar el número de solicitudes.
 - 🌐 **CORS** configurado para permitir solo orígenes definidos.
+- ☁️ **Render** para despliegue y hosting de la API.
 
 ## 📦 Instalación
 
@@ -166,4 +168,4 @@ docker-compose up --build
 ## ✅ Notas finales
 
 - Asegúrate de mantener seguras tus credenciales.
-- Para producción, considera usar servicios como [Render](https://render.com), [Railway](https://railway.app) o [Google Cloud Run](https://cloud.google.com/run).
+- Para producción, considera usar servicios como el ya mencionado [Render](https://render.com), [Railway](https://railway.app) o [Google Cloud Run](https://cloud.google.com/run).
