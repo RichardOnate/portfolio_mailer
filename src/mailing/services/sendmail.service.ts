@@ -33,7 +33,7 @@ export class SendMailService {
     ) {
       const response = {
         statusCode: 500,
-        message: `Error sending mail : ${'Faltan datos'}`,
+        message: `Error sending mail : ${'Datos incompletos'}`,
       } as MailError;
 
       return response;
@@ -53,15 +53,10 @@ export class SendMailService {
       html: compiledTemplate(this.context),
     };
 
-    try {
-      return await this.mailerService.sendMail(mailOptions);
-    } catch (error) {
-      const response = {
-        statusCode: 500,
-        message: `Error sending mail : ${error}`,
-      } as MailError;
-
-      return response;
-    }
+try {
+  return await this.mailerService.sendMail(mailOptions);
+} catch (error) {
+  throw new Error(`Error sending mail: ${error.message || error}`);
+}
   }
 }
